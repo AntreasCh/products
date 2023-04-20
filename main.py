@@ -93,7 +93,7 @@ def get_product(product_id: int, product_quantity: int, user_id: int ):
         
         # add item to cart
         cart_item = {"product_id": product[0], "name":product[1], "quantity":product_quantity, "price":product[3],"type":product[4],"picture_url":product[7],"description":product[6],"category":product[8],"gender":product[5]}
-        response = requests.post(f"http://localhost:8001/cart/add-item/{user_id}", json=cart_item)
+        response = requests.post(f"http://13.53.140.100/cart/add-item/{user_id}", json=cart_item)
 
    
         if response.status_code != 200:
